@@ -28,5 +28,5 @@
                  :changes-only true
                  :stack-trace-depth nil
                  :run-once false
-                 :watch-dirs ["src" "src-common" "test-common"]
-                 :refresh-dirs ["src" "src-common" "test-common"]})
+                 :watch-dirs ["src" "src-common" "test"]
+                 :refresh-dirs ["src" "src-common" "test"]})
