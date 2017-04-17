@@ -7,7 +7,8 @@
   :on-show
   (fn [screen entities]
     (update! screen :renderer (stage))
-    (g2d/texture "logo.png"))
+    (assoc (g2d/texture "logo.png")
+      :x 10 :y 10 :width 20 :height 20))
 
   :on-render
   (fn [screen entities]
