@@ -1,26 +1,27 @@
 (ns testing.core
   (:require [play-clj.core :refer :all]
             [play-clj.ui :as ui]
-            [play-clj.g2d :as g2d]))
+            [play-clj.g2d :as g2d]
+            [testing.input :as input]))
 
 (defscreen main-screen
   :on-show
   (fn [screen entities]
     (update! screen :renderer (stage))
     (assoc (g2d/texture "logo.png")
-      :x 10 :y 10 :width 20 :height 20))
+      :x 10 :y 10 :width 40 :height 40))
 
   :on-key-down
   (fn [screen entities]
     (cond
       (= (:key screen) (key-code :dpad-up))
-      (println "up")
+      (input/move (first entities) :up)
       (= (:key screen) (key-code :dpad-down))
-      (println "down")
+      (input/move (first entities) :down)
       (= (:key screen) (key-code :dpad-right))
-      (println "right")
+      (input/move (first entities) :right)
       (= (:key screen) (key-code :dpad-left))
-      (println "left")))
+      (input/move (first entities) :left)))
 
   :on-render
   (fn [screen entities]
