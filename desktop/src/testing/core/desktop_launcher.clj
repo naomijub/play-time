@@ -1,10 +1,10 @@
 (ns testing.core.desktop-launcher
-  (:require [testing.core :refer :all])
+  (:require [testing.core :as game])
   (:import [com.badlogic.gdx.backends.lwjgl LwjglApplication]
            [org.lwjgl.input Keyboard])
   (:gen-class))
 
 (defn -main
   []
-  (LwjglApplication. testing-game "testing" 800 600)
+  (LwjglApplication. game/testing-game "Clj Game Dev" 800 600)
   (Keyboard/enableRepeatEvents true))
