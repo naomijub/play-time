@@ -10,6 +10,18 @@
     (assoc (g2d/texture "logo.png")
       :x 10 :y 10 :width 20 :height 20))
 
+  :on-key-down
+  (fn [screen entities]
+    (cond
+      (= (:key screen) (key-code :dpad-up))
+      (println "up")
+      (= (:key screen) (key-code :dpad-down))
+      (println "down")
+      (= (:key screen) (key-code :dpad-right))
+      (println "right")
+      (= (:key screen) (key-code :dpad-left))
+      (println "left")))
+
   :on-render
   (fn [screen entities]
     (clear!)
