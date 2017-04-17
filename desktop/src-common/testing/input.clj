@@ -1,6 +1,14 @@
 (ns testing.input
   (:require [play-clj.core :refer :all]))
 
+(def speed 5)
+
+(defn inc-speed [x]
+  (+ x speed))
+
+(defn dec-speed [x]
+  (- x speed))
+
 (defn move
   [entity direction]
   (case direction

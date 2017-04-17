@@ -15,7 +15,7 @@
                  [play-clj "1.1.1"]
                  [expectations "2.2.0-beta1"]]
 
-  :source-paths ["src" "src-common"]
+  :source-paths ["src" "src-common" "test"]
   :javac-options ["-target" "1.6" "-source" "1.6" "-Xlint:-options"]
   :aot [testing.core.desktop-launcher]
   :main testing.core.desktop-launcher
