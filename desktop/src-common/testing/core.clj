@@ -1,12 +1,12 @@
 (ns testing.core
   (:require [play-clj.core :refer :all]
-            [play-clj.ui :refer :all]))
+            [play-clj.ui :as ui]))
 
 (defscreen main-screen
   :on-show
   (fn [screen entities]
     (update! screen :renderer (stage))
-    (label "Bloba Games!" (color :white)))
+    (ui/label "Clojure shall conquer the world!!!" (color :white)))
 
   :on-render
   (fn [screen entities]

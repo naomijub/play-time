@@ -6,5 +6,5 @@
 
 (defn -main
   []
-  (LwjglApplication. game/testing-game "Clj Game Dev" 800 600)
+  (LwjglApplication. game/testing-game "Clojure's Rampage" 800 600)
   (Keyboard/enableRepeatEvents true))
