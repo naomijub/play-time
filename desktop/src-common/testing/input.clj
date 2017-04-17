@@ -12,8 +12,8 @@
 (defn move
   [entity direction]
   (case direction
-    :down (update entity :y dec)
-    :up (update entity :y inc)
-    :left (update entity :x dec)
-    :right (update entity :x inc)
+    :down (update entity :y dec-speed)
+    :up (update entity :y inc-speed)
+    :left (update entity :x dec-speed)
+    :right (update entity :x inc-speed)
     nil))
