@@ -8,8 +8,10 @@
   :on-show
   (fn [screen entities]
     (update! screen :renderer (stage))
-    (assoc (g2d/texture "logo.png")
-      :x 10 :y 10 :width 40 :height 40))
+    [(assoc (g2d/texture "logo.png")
+      :x 10 :y 10 :width 40 :height 40)
+     (assoc (g2d/texture "javalogo.png")
+      :x 400 :y 400 :width 40 :height 40)])
 
   :on-key-down
   (fn [screen entities]
