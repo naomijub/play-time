@@ -11,7 +11,7 @@
                   :classifier "natives-desktop"]
                  [com.badlogicgames.gdx/gdx-platform "1.9.3"
                   :classifier "natives-desktop"]
-                 [org.clojure/clojure "1.7.0"]
+                 [org.clojure/clojure "1.9.0-alpha15"]
                  [play-clj "1.1.1"]
                  [expectations "2.2.0-beta1"]]
 
@@ -20,7 +20,8 @@
   :aot [testing.core.desktop-launcher]
   :main testing.core.desktop-launcher
   :profiles
-  {:dev {:dependencies [[proto-repl "0.3.1"]]
+  {:dev {:dependencies [[proto-repl "0.3.1"]
+                        [org.clojure/test.check "0.9.0"]]
          :plugins [[com.jakemccrary/lein-test-refresh "0.19.0"]]}}
   :test-refresh {:growl false
                  :notify-on-success false
