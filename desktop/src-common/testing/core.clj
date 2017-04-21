@@ -7,7 +7,8 @@
 (defscreen main-screen
   :on-show
   (fn [screen entities]
-    (update! screen :renderer (stage))
+    (update! screen :renderer (stage)
+      :camera (orthographic))
     [(assoc (g2d/texture "logo.png")
       :x 10 :y 10 :width 40 :height 40)
      (assoc (g2d/texture "javalogo.png")
@@ -28,7 +29,11 @@
   :on-render
   (fn [screen entities]
     (clear!)
-    (render! screen entities)))
+    (render! screen entities))
+
+  :on-resize
+  (fn [screen entities]
+    (height! screen 800)))
 
 (defgame testing-game
   :on-create

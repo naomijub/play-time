@@ -3,10 +3,12 @@
 
 (def speed 5)
 
-(defn inc-speed [x]
+(defn inc-speed
+  [x]
   (+ x speed))
 
-(defn dec-speed [x]
+(defn dec-speed
+  [x]
   (- x speed))
 
 (defn move
